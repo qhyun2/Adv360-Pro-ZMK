@@ -26,20 +26,19 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <175>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
+
         hold_tap: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             global-quick-tap;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -48,21 +47,21 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1            &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                              &mo 3          &kp N6  &kp N7          &kp N8        &kp N9    &kp N0                &kp MINUS
-&kp EQUAL  &kp Q             &kp W   &kp E     &kp R      &kp T   &kp C_VOLUME_UP                                                                     &none          &kp Y   &kp U           &kp I         &kp O     &kp P                 &kp BSLH
-&none      &kp A             &kp S   &kp D     &kp F      &kp G   &kp C_VOL_DN     &kp LEFT_ALT  &kp LEFT_CONTROL      &kp LC(LG(Q))      &kp ESCAPE  &none          &kp H   &kp J           &kp K         &kp L     &kp SEMI              &kp SQT
-&kp LSHFT  &hold_tap LGUI Z  &kp X   &kp C     &kp V      &kp B                                  &kp HOME              &none                                         &kp N   &kp M           &kp COMMA     &kp DOT   &hold_tap RGUI SLASH  &kp RSHFT
-&mo 1      &none             &none   &kp LEFT  &kp RIGHT          &kp SPACE        &kp TAB       &kp END               &kp RA(RIGHT_GUI)  &kp ENTER   &kp BACKSPACE          &kp DOWN_ARROW  &kp UP_ARROW  &kp LBKT  &kp RBKT              &mo 1
+&kp EQUAL  &kp N1            &kp N2            &kp N3                    &kp N4              &kp N5   &tog 1                                                          &mo 3          &kp N6  &kp N7              &kp N8             &kp N9            &kp N0                    &kp MINUS
+&kp EQUAL  &kp Q             &kp W             &kp E                     &kp R               &kp T    &kp C_VOLUME_UP                                                 &none          &kp Y   &kp U               &kp I              &kp O             &kp P                     &kp BSLH
+&none      &hold_tap LGUI A  &hold_tap LALT S  &hold_tap LEFT_CONTROL D  &hold_tap LSHIFT F  &lt 1 G  &kp C_VOL_DN     &none    &none      &none          &kp ESCAPE  &none          &kp H   &hold_tap RSHIFT J  &hold_tap RCTRL K  &hold_tap RALT L  &hold_tap RCMD SEMICOLON  &kp SQT
+&kp LSHFT  &hold_tap LGUI Z  &kp X             &kp C                     &kp V               &kp B                              &none      &kp LC(LG(Q))                             &kp N   &kp M               &kp COMMA          &kp DOT           &hold_tap RGUI SLASH      &kp RSHFT
+&mo 1      &none             &none             &kp LEFT                  &kp RIGHT                    &kp SPACE        &kp TAB  &none      &none          &kp ENTER   &kp BACKSPACE          &kp DOWN_ARROW      &kp UP_ARROW       &kp LBKT          &kp RBKT                  &mo 1
             >;
         };
 
         layer_keypad {
             bindings = <
-&kp ESC    &kp F1           &kp F2       &kp F3                &kp F4                 &kp F5     &trans                                                   &mo 3      &kp F6  &kp F7     &kp F8     &kp F9      &kp F10       &kp F11
-&none      &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE   &none                                                    &none      &kp Y   &kp KP_N7  &kp KP_N8  &kp KP_N9   &kp KP_MINUS  &kp F12
-&none      &kp HASH         &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE  &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS   &kp SQT
-&kp LSHFT  &kp PERCENT      &kp CARET    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE                       &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1  &kp KP_N2  &kp KP_N3   &kp KP_ENTER  &kp RSHFT
-&mo 2      &none            &kp CAPS     &kp LEFT              &kp RIGHT                         &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP     &kp DOWN   &kp KP_DOT  &kp RBKT      &mo 2
+&kp ESC    &kp F1           &kp F2       &kp F3                &kp F4                 &kp F5     &trans                                                   &mo 3      &kp F6  &kp F7     &kp F8     &kp F9            &kp F10            &kp F11
+&none      &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE   &none                                                    &none      &kp Y   &kp KP_N7  &kp KP_N8  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp F12
+&none      &kp HASH         &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE  &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4  &kp KP_N5  &kp KP_N6         &kp KP_PLUS        &kp SQT
+&kp LSHFT  &kp PERCENT      &kp CARET    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE                       &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1  &kp KP_N2  &kp KP_N3         &kp KP_ENTER       &kp RSHFT
+&mo 2      &none            &kp CAPS     &kp LEFT              &kp RIGHT                         &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP     &kp DOWN   &kp KP_DOT        &kp RBKT           &mo 2
             >;
         };
 
