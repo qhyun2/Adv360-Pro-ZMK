@@ -10,10 +10,7 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
@@ -45,51 +42,21 @@
 
         default_layer {
             bindings = <
-&kp EQUAL      &kp N1            &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                          &mo 3          &kp N6  &kp N7          &kp N8        &kp N9    &kp N0                &kp MINUS
-&kp EQUAL      &kp Q             &kp W   &kp E     &kp R      &kp T   &kp C_VOLUME_UP                                                                 &none          &kp Y   &kp U           &kp I         &kp O     &kp P                 &kp BSLH
-&mo 1          &kp A             &kp S   &kp D     &kp F      &kp G   &kp C_VOL_DN     &kp LEFT_ALT  &kp LEFT_CONTROL      &kp LC(LG(Q))  &kp ESCAPE  &none          &kp H   &kp J           &kp K         &kp L     &kp SEMI              &kp SQT
-&kp LSHFT      &hold_tap LGUI Z  &kp X   &kp C     &kp V      &kp B                                  &kp HOME              &none                                     &kp N   &kp M           &kp COMMA     &kp DOT   &hold_tap RGUI SLASH  &kp RSHFT
-&kp LA(LCTRL)  &none             &none   &kp LEFT  &kp RIGHT          &kp SPACE        &kp TAB       &kp END               &none          &kp ENTER   &kp BACKSPACE          &kp DOWN_ARROW  &kp UP_ARROW  &kp LBKT  &kp RBKT              &kp RA(RCTRL)
+&kp EQUAL       &kp N1            &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                          &mo 0          &kp N6  &kp N7          &kp N8        &kp N9    &kp N0                &kp MINUS
+&kp EQUAL       &kp Q             &kp W   &kp E     &kp R      &kp T   &kp C_VOLUME_UP                                                                 &none          &kp Y   &kp U           &kp I         &kp O     &kp P                 &kp BSLH
+&kp LEFT_SHIFT  &kp A             &kp S   &kp D     &kp F      &kp G   &kp C_VOL_DN     &kp LEFT_ALT  &kp LEFT_CONTROL      &kp LC(LG(Q))  &kp ESCAPE  &none          &kp H   &kp J           &kp K         &kp L     &kp SEMI              &kp SQT
+&mo 1           &hold_tap LGUI Z  &kp X   &kp C     &kp V      &kp B                                  &kp HOME              &none                                     &kp N   &kp M           &kp COMMA     &kp DOT   &hold_tap RGUI SLASH  &kp RSHFT
+&none           &none             &none   &kp LEFT  &kp RIGHT          &kp SPACE        &kp TAB       &kp END               &none          &kp ENTER   &kp BACKSPACE          &kp DOWN_ARROW  &kp UP_ARROW  &kp LBKT  &kp RBKT              &mo 1
             >;
         };
 
         layer_keypad {
             bindings = <
-&kp ESC  &kp F1          &kp F2          &kp F3            &kp F4             &kp F5     &trans                                                 &trans  &kp F6  &kp F7  &kp F8    &kp F9            &kp F10            &kp F11
-&trans   &kp LS(LC(F1))  &kp LS(LC(F2))  &kp LS(LC(F3))    &kp LS(LC(F4))     &kp PIPE   &trans                                                 &trans  &trans  &trans  &trans    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp F12
-&trans   &kp LS(LC(F5))  &kp LS(LC(F6))  &kp LS(LC(F7))    &kp LS(LC(F8))     &kp GRAVE  &trans  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &trans  &trans  &trans  &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SQT
-&trans   &kp PERCENT     &kp CARET       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE                     &kp HOME      &kp PG_UP                     &trans  &trans  &trans    &kp GRAVE         &kp TILDE          &trans
-&trans   &trans          &kp CAPS        &kp LEFT          &kp RIGHT                     &trans  &trans     &kp END       &kp PG_DN  &trans     &trans          &kp UP  &kp DOWN  &trans            &trans             &trans
-            >;
-        };
-
-        layer_fn {
-            bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
-            >;
-        };
-
-        layer_mod {
-            bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&kp ESC  &kp F1          &kp F2          &kp F3          &kp F4          &kp F5  &trans                                            &trans  &kp F6  &kp F7         &kp F8         &kp F9            &kp F10            &kp F11
+&trans   &kp LS(LC(F1))  &kp LS(LC(F2))  &kp LS(LC(F3))  &kp LS(LC(F4))  &trans  &trans                                            &trans  &trans  &trans         &trans         &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp F12
+&trans   &kp LS(LC(F5))  &kp LS(LC(F6))  &kp LS(LC(F7))  &kp LS(LC(F8))  &trans  &trans  &trans  &trans      &kp LGUI   &kp RCTRL  &trans  &trans  &kp LA(LC(J))  &kp LA(LC(K))  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SQT
+&trans   &trans          &trans          &trans          &trans          &trans                  &trans      &kp PG_UP                     &trans  &trans         &trans         &kp GRAVE         &kp TILDE          &trans
+&trans   &trans          &trans          &trans          &trans                  &trans  &trans  &trans      &kp PG_DN  &trans     &trans          &kp UP         &kp DOWN       &trans            &trans             &trans
             >;
         };
     };
