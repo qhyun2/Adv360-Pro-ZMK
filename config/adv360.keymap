@@ -42,21 +42,21 @@
 
         default_layer {
             bindings = <
-&kp EQUAL       &kp N1            &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                          &mo 0          &kp N6  &kp N7          &kp N8        &kp N9    &kp N0                &kp MINUS
+&none           &kp N1            &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                          &mo 0          &kp N6  &kp N7          &kp N8        &kp N9    &kp N0                &kp MINUS
 &kp EQUAL       &kp Q             &kp W   &kp E     &kp R      &kp T   &kp C_VOLUME_UP                                                                 &none          &kp Y   &kp U           &kp I         &kp O     &kp P                 &kp BSLH
-&kp LEFT_SHIFT  &kp A             &kp S   &kp D     &kp F      &kp G   &kp C_VOL_DN     &kp LEFT_ALT  &kp LEFT_CONTROL      &kp LC(LG(Q))  &kp ESCAPE  &none          &kp H   &kp J           &kp K         &kp L     &kp SEMI              &kp SQT
-&mo 1           &hold_tap LGUI Z  &kp X   &kp C     &kp V      &kp B                                  &kp HOME              &none                                     &kp N   &kp M           &kp COMMA     &kp DOT   &hold_tap RGUI SLASH  &kp RSHFT
-&none           &none             &none   &kp LEFT  &kp RIGHT          &kp SPACE        &kp TAB       &kp END               &none          &kp ENTER   &kp BACKSPACE          &kp DOWN_ARROW  &kp UP_ARROW  &kp LBKT  &kp RBKT              &mo 1
+&kp EQUAL       &kp A             &kp S   &kp D     &kp F      &kp G   &kp C_VOL_DN     &kp LEFT_ALT  &kp LEFT_CONTROL      &kp LC(LG(Q))  &kp ESCAPE  &none          &kp H   &kp J           &kp K         &kp L     &kp SEMI              &kp SQT
+&kp LEFT_SHIFT  &hold_tap LGUI Z  &kp X   &kp C     &kp V      &kp B                                  &kp HOME              &none                                     &kp N   &kp M           &kp COMMA     &kp DOT   &hold_tap RGUI SLASH  &kp RSHFT
+&mo 1           &none             &none   &kp LEFT  &kp RIGHT          &kp SPACE        &kp TAB       &kp END               &none          &kp ENTER   &kp BACKSPACE          &kp DOWN_ARROW  &kp UP_ARROW  &kp LBKT  &kp RBKT              &mo 1
             >;
         };
 
         layer_keypad {
             bindings = <
-&kp ESC  &kp F1          &kp F2          &kp F3          &kp F4          &kp F5  &trans                                            &trans  &kp F6  &kp F7         &kp F8         &kp F9            &kp F10            &kp F11
-&trans   &kp LS(LC(F1))  &kp LS(LC(F2))  &kp LS(LC(F3))  &kp LS(LC(F4))  &trans  &trans                                            &trans  &trans  &trans         &trans         &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp F12
-&trans   &kp LS(LC(F5))  &kp LS(LC(F6))  &kp LS(LC(F7))  &kp LS(LC(F8))  &trans  &trans  &trans  &trans      &kp LGUI   &kp RCTRL  &trans  &trans  &kp LA(LC(J))  &kp LA(LC(K))  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SQT
-&trans   &trans          &trans          &trans          &trans          &trans                  &trans      &kp PG_UP                     &trans  &trans         &trans         &kp GRAVE         &kp TILDE          &trans
-&trans   &trans          &trans          &trans          &trans                  &trans  &trans  &trans      &kp PG_DN  &trans     &trans          &kp UP         &kp DOWN       &trans            &trans             &trans
+&kp ESC  &kp F1          &kp F2          &kp F3          &kp F4          &kp F5  &trans                                            &trans  &kp F6  &kp F7         &kp F8         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F11
+&trans   &kp LS(LC(F1))  &kp LS(LC(F2))  &kp LS(LC(F3))  &kp LS(LC(F4))  &trans  &trans                                            &trans  &trans  &trans         &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp F12
+&trans   &kp LS(LC(F5))  &kp LS(LC(F6))  &kp LS(LC(F7))  &kp LS(LC(F8))  &trans  &trans  &trans  &trans      &kp LGUI   &kp RCTRL  &trans  &trans  &kp LA(LC(J))  &kp LA(LC(K))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT
+&trans   &trans          &trans          &trans          &trans          &trans                  &trans      &kp PG_UP                     &trans  &trans         &trans         &kp GRAVE             &kp TILDE              &trans
+&trans   &trans          &trans          &trans          &trans                  &trans  &trans  &trans      &kp PG_DN  &trans     &trans          &kp UP         &kp DOWN       &trans                &trans                 &trans
             >;
         };
     };
