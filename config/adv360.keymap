@@ -53,7 +53,7 @@
         layer_keypad {
             bindings = <
 &kp ESC  &kp F1          &kp F2          &kp F3          &kp F4          &kp F5  &trans                                            &trans  &kp F6  &kp F7         &kp F8         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp F11
-&trans   &kp LS(LC(F1))  &kp LS(LC(F2))  &kp LS(LC(F3))  &kp LS(LC(F4))  &trans  &trans                                            &trans  &trans  &trans         &trans         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp F12
+&trans   &kp LS(LC(F1))  &kp LS(LC(F2))  &kp LS(LC(F3))  &kp LS(LC(F4))  &trans  &trans                                            &trans  &trans  &kp LA(LC(U))  &kp LA(LC(I))  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp F12
 &trans   &kp LS(LC(F5))  &kp LS(LC(F6))  &kp LS(LC(F7))  &kp LS(LC(F8))  &trans  &trans  &trans  &trans      &kp LGUI   &kp RCTRL  &trans  &trans  &kp LA(LC(J))  &kp LA(LC(K))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT
 &trans   &trans          &trans          &trans          &trans          &trans                  &trans      &kp PG_UP                     &trans  &trans         &trans         &kp GRAVE             &kp TILDE              &trans
 &trans   &trans          &trans          &trans          &trans                  &trans  &trans  &trans      &kp PG_DN  &trans     &trans          &kp UP         &kp DOWN       &trans                &trans                 &trans
